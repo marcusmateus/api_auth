@@ -1,3 +1,9 @@
+Updated gem to support Rails3 / ActionDispatch and Rspec2.
+
+ * Note: Despite the pseudocode below, at lest for Net::HTTP calls, the full
+   uri is not used in the canonical string... just the path.  Since, I'm using
+   Net::HTTP on the client I similarly use the fullpath in ActionDispatch
+
 ApiAuth
 =======
 

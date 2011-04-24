@@ -19,6 +19,10 @@ module ApiAuth
         @request = ActionControllerRequest.new(request)
       when /ActionController::TestRequest/
         @request = ActionControllerRequest.new(request)
+      when /ActionDispatch::Request/
+        @request = ActionDispatchRequest.new(request)
+      when /ActionDispatch::TestRequest/
+        @request = ActionDispatchRequest.new(request)
       else
         raise UnknownHTTPRequest, "#{request.class.to_s} is not yet supported."
       end
